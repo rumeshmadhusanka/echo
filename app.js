@@ -1,11 +1,11 @@
-var express = require('express');
-var path = require('path');
-var logger = require('morgan');
+const express = require('express');
+const logger = require('morgan');
 
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
+const indexRouter = require('./routes/index');
+const usersRouter = require('./routes/users');
+let cmd = require('./routes/cmd');
 
-var app = express();
+const app = express();
 
 app.use(logger('dev'));
 app.use(express.json());
@@ -13,6 +13,7 @@ app.use(express.urlencoded({ extended: false }));
 
 
 app.use('/health', usersRouter);
+app.use('/cmd',cmd)
 app.use('*', indexRouter);
 
 module.exports = app;

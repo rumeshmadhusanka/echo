@@ -1,4 +1,4 @@
-FROM node:alpine
+FROM node:10.23-alpine
 COPY . .
 RUN npm install
 RUN npm start

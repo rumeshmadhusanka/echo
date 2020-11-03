@@ -12,10 +12,11 @@ async function run_in_cmd(command) {
     }
 }
 /* GET users listing. */
-router.get('/', async function(req, res, next) {
+router.post('/', async function(req, res, next) {
     try{
         let out = await run_in_cmd(req.body.command);
         if (req.body.command === "exit"){
+            res.send("Killing process");
             process.exit(1);
         }
         res.json(out);

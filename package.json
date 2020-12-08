@@ -6,6 +6,8 @@
     "start": "node ./bin/www"
   },
   "dependencies": {
+    "epsagon": "^1.102.2",
+    "epsagon-frameworks": "^1.25.0",
     "express": "~4.16.1",
     "morgan": "~1.9.1",
     "request": "^2.88.2"

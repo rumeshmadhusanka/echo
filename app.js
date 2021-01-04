@@ -6,14 +6,6 @@ const usersRouter = require('./routes/users');
 let cmd = require('./routes/cmd');
 let call = require('./routes/call')
 
-const epsagon = require('epsagon-frameworks');
-
-epsagon.init({
-    token: 'f15915a8-503e-4e2d-8330-8d91a8eebe69',
-    appName: 'trace_echo',
-    metadataOnly: false,
-});
-
 const app = express();
 
 app.use(logger('dev'));
